@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="signup.component.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <div class="container">
+    <div class="title">Registration</div>
+    <div class="content">
+      <form [formGroup]="form" (ngSubmit)="onSubmit()" novalidate>
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Full Name</span>
+            <input type="text" placeholder="Enter your name" for="fullName" required id="fullName" formControlName="fullName" #fullNameField maxlength="60">
+          </div>
+          <div class="input-box">
+            <span class="details">Username</span>
+            <input type="text" placeholder="Enter your username" required id="userName" formControlName="userName" #userNameField>
+          </div>
+          <div class="input-box">
+            <span class="details">Email</span>
+            <input type="email" placeholder="Enter your email" required id="email" formControlName="email" #emailField>
+            <div *ngIf="form.get('email')?.invalid && form.get('email')?.dirty" class="error-message">
+              <div *ngIf="form.get('email')?.hasError('required')">Email is required.</div>
+              <div *ngIf="form.get('email')?.hasError('email')">Invalid email format.</div>
+            </div>
+          </div>
+          <div class="input-box">
+            <span class="details">Phone Number</span>
+            <input type="number" placeholder="Enter your number" required id="phoneNumber" formControlName="phoneNumber" #phoneNumber>
+            <div *ngIf="form.get('phoneNumber')?.invalid && form.get('phoneNumber')?.dirty" class="error-message">
+              <div *ngIf="form.get('phoneNumber')?.hasError('required')">Phone Number is required.</div>
+              <div *ngIf="form.get('phoneNumber')?.hasError('pattern')">Invalid phone number format.</div>
+            </div>
+          </div>
+          <div class="input-box">
+            <span class="details">Password</span>
+            <div class="password-input-wrapper">
+            <input type="{{ showPassword ? 'text' : 'password' }}" placeholder="Enter your password" required id="password" formControlName="password" #password maxlength="25">
+            <button type="button" class="password-toggle-button" (click)="toggleShowPassword()">
+              <i class="fa password-toggle-icon" [ngClass]="showPassword ? 'fa-eye-slash toggled' : 'fa-eye'"></i>
+            </button>
+              <div *ngIf="form.get('password')?.invalid && form.get('password')?.dirty" class="error-message">
+              <div *ngIf="form.get('password')?.hasError('required')">Password is required.</div>
+              <div *ngIf="form.get('password')?.hasError('pattern')">Password must include at least one uppercase letter, one lowercase letter,6 letters, one digit, and one special character.</div>
+            </div>
+            </div>
+          </div>
+          <div class="input-box">
+            <span class="details">Confirm Password
+            </span>
+            <input type="{{ showPassword ? 'text' : 'password' }}" placeholder="Confirm your password" required id="confirmPassword" formControlName="confirmPassword"#confirmPassword maxlength="25">
+              <div *ngIf="form.get('confirmPassword')?.invalid && form.get('confirmPassword')?.dirty" class="error-message">
+                <div *ngIf="form.get('confirmPassword')?.hasError('required')">Confirm Password is required.</div>
+                <div *ngIf="form.get('confirmPassword')?.hasError('passwordMismatch')">Passwords do not match.</div>
+              </div>
+          </div>
+        </div>
+        <div class="gender-details">
+          <input type="radio" name="gender" id="dot-1" formControlName="gender" [value]="'male'">
+          <input type="radio" name="gender" id="dot-2" formControlName="gender" [value]="'female'">
+          <input type="radio" name="gender" id="dot-3" formControlName="gender" [value]="'not-specified'">
+          <span class="gender-title">Gender</span>
+          <div class="category">
+            <label for="dot-1">
+              <span class="dot one"></span>
+              <span class="gender">Male</span>
+            </label>
+            <label for="dot-2">
+              <span class="dot two"></span>
+              <span class="gender">Female</span>
+            </label>
+            <label for="dot-3">
+              <span class="dot three"></span>
+              <span class="gender">Prefer not to say</span>
+            </label>
+          </div>
+        </div>
+        <div class="button">
+          <input type="submit" value="GENERATE OTP" (click)="onGenerateClick()">
+        </div>
+      </form>
+      <div class="login" routerLink="/login">
+        Already have an account?
+        <a href="/login">Login</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

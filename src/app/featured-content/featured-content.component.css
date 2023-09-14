@@ -1,0 +1,234 @@
+/* tv-shows.component.css */
+
+.tv-shows {
+  padding: 20px;
+  /* background-image: url('../../assets/images/background.jpg'); */
+}
+
+.tv-shows h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.tv-shows-list {
+  max-height: 500px; /* Set the desired max height */
+  overflow-y: auto; /* Enable vertical scrolling */
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.tv-show {
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.tv-show img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.tv-show h2 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.tv-show p {
+  font-size: 14px;
+  color: #666;
+}
+/* tv-shows.component.css */
+
+/* ... Other styles ... */
+
+.description {
+  position: relative;
+}
+
+.description.expanded {
+  max-height: none; /* Expands the description */
+}
+
+.read-more {
+  color: #ff9900;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+/* ... Other styles ... */
+
+
+
+.stories {
+  display: flex;
+  gap: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  scrollbar-width: thin; /* Set the width of the scrollbar */
+  scrollbar-color: #999 #f9f9f9; /* Set the color of the scrollbar */
+  padding-top: 3px;
+}
+
+.story {
+  width: 80px;
+  height: 80px;
+  background-color: #f9f9f9;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.story img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+.story-image {
+  width: 80px;
+  height: 80px;
+  overflow: hidden;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.story-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Crop and adjust image */
+}
+
+
+.stories::-webkit-scrollbar {
+  width: 8px; /* Set the width of the scrollbar */
+}
+
+.stories::-webkit-scrollbar-thumb {
+  background-color: #999; /* Set the color of the thumb */
+  border-radius: 4px; /* Rounded corners for the thumb */
+}
+
+.stories::-webkit-scrollbar-thumb:hover {
+  background-color: #666; /* Color when hovering over the thumb */
+}
+
+.stories::-webkit-scrollbar-track {
+  background-color: #f9f9f9; /* Color of the track */
+}
+
+.story-image.unseen {
+  border: 2px 
+  solid #ff9900; 
+  /* Border color for unseen stories */
+}
+
+.story-image img {
+  /* ... Your existing styles ... */
+  opacity: 0.7; /* Reduced opacity for seen stories */
+}
+
+.story-image.unseen img {
+  opacity: 1; /* Full opacity for unseen stories */
+}
+
+/* tv-shows.component.css */
+
+/* ... Your existing styles ... */
+
+/* Styling for the story slider */
+.slider {
+  display: flex;
+  align-items: center;
+}
+
+.story-slider {
+  display: flex;
+  overflow: hidden;
+  width: 100%; /* Adjust the width of the slider */
+}
+
+.story-slide {
+  flex: 0 0 100%;
+  transition: transform 0.3s ease;
+}
+
+.slider-button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.story-image.active {
+  transform: scale(1.2); /* Increase size of active slide */
+  transition: transform 0.3s ease;
+}
+/* featured-content.component.css */
+/* featured-content.component.css */
+
+/* featured-content.component.css */
+
+.user-list {
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.user-card {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+.card {
+  width: 200px;
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top {
+  width: 80%;
+  height: 80%;
+  object-fit: cover;
+  border-radius: 120px;
+  margin: 20px
+}
+
+.card-body {
+  padding: 10px;
+}
+
+.card-title {
+  height: 18px;
+  margin-top: -20px;
+  font-size: 16px;
+  margin-bottom: 5px;
+  text-align: center; /* Align text in center */
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 5px 10px; /* Adjust padding for the button */
+  transition: background-color 0.3s ease;
+  display: block; /* Display as block element to center it */
+  margin: 10px auto; /* Center the button within the card */
+  height: 33px;
+  width: 100%;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.btn-primary:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}

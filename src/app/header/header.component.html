@@ -1,0 +1,33 @@
+<header [class.dark-theme]="themeService.isDarkTheme()">
+  <nav>
+    <div class="search-bar">
+      <input type="text" placeholder="Search...">
+      <button>Search</button>
+    </div>
+    <ul>
+      <li><a routerLink="/">Home</a></li>
+      <li><a routerLink="/movies">Movies</a></li>
+      <li><a routerLink="/tv-shows">TV Shows</a></li>
+      <!-- Add more navigation links as needed -->
+    </ul>
+    <div class="login-button-container">
+<!-- Check if the user is logged in -->
+<ng-container *ngIf="authService.isAuthenticatedUser(); else showLoginButton">
+  <!-- Show profile image and handle click event -->
+  <div class="profile-icon" (click)="clickProfileIcon()">
+    <!-- Replace 'user-profile-image.jpg' with the actual image URL -->
+    <img src="../../assets/images/1325984.jpeg" alt="Profile Image" class="profile-image">
+  </div>
+</ng-container>
+<ng-template #showLoginButton>
+  <!-- Show the login button if the user is not logged in -->
+  <button class="login-button" (click)="clicklogin()">Login</button>
+</ng-template>
+<!-- Toggle Button -->
+
+<!-- <button (click)="toggleTheme()">Toggle Theme</button> -->
+
+    </div>
+
+     </nav>
+    </header>

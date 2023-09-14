@@ -1,0 +1,60 @@
+/* privacy-policy.component.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    background: url('../../assets/images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    box-shadow: -1px 4px 28px 0px black;
+    font-family: Arial, sans-serif;
+  }
+  
+  .header {
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    padding: 10px 0;
+    font-family: 'Montserrat',sans-serif;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+    position: sticky;
+    top: 18px;
+    font-weight: 600;
+    z-index: 2;
+  }
+  
+  .container-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+  }
+  
+  .container {
+    max-width: 700px;
+    width: 100%;
+    background-color: #fff;
+    padding: 25px 30px;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+    overflow-y: auto;
+    max-height: 70vh;
+    margin-top:35px
+  }
+  
+  /* Apply smooth scrolling to internal anchor links */
+  .container a[href^="#"] {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .container a[href^="#"]:hover {
+    color: #0056b3;
+  }
+  
+  /* Add smooth scrolling behavior */
+  .container {
+    scroll-behavior: smooth;
+  }
+  

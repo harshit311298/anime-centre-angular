@@ -1,0 +1,45 @@
+/* footer.component.css */
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+  }
+  
+  p {
+    font-size: 14px;
+  }
+  
+  /* Adding some extra style to the copyright notice */
+  p::before {
+    content: "\00a9";
+    font-size: 18px;
+    margin-right: 5px;
+  }
+  .footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .footer-links a {
+    color: white;
+    margin-right: 20px;
+    text-decoration: none;
+  }
+  
+  .footer-logo img {
+    width: 100px;
+    height: auto;
+  }
+  

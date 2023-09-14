@@ -1,0 +1,18 @@
+<app-header></app-header>
+
+<section class="tv-shows">
+    <h1>TV Shows</h1>
+    <div class="tv-shows-list">
+      <div class="tv-show" *ngFor="let tvShow of tvShows; let i = index">
+        <img src="{{ tvShow.image }}" alt="{{ tvShow.title }}" class="tv-show-image">
+        <h2>{{ tvShow.title }}</h2>
+        <div class="description">
+          <p [innerHTML]="getDescription(i)" [class.expanded]="expandedDescriptions[i]"></p>
+          <a href="javascript:void(0);" class="read-more" (click)="toggleDescription(i)">
+            {{ expandedDescriptions[i] ? 'Read less' : 'Read more' }}
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+<app-footer></app-footer>
