@@ -1,0 +1,16 @@
+[build]
+  command = "ng build --configuration=production"
+  publish = "dist/my-app"  # Replace 'your-app-name' with your actual app name
+
+[context.production.environment]
+  # Add environment variables for production here
+  # Example: API_KEY = "your-api-key"
+
+[context.development]
+  command = "ng build"
+  publish = "dist/my-app"  # Replace 'your-app-name' with your actual app name
+
+[context.development.environment]
+  # Add environment variables for development here
+
+# Additional configuration options can be added as needed
