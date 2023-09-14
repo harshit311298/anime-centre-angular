@@ -1,0 +1,157 @@
+/* header.component.css */
+
+/* Styles for larger screens */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+li {
+  font-size: 18px;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #ff9900;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.search-bar input[type="text"] {
+  padding: 10px;
+  width: 300px;
+  border: none;
+  border-radius: 4px;
+}
+
+.search-bar button {
+  padding: 10px 20px;
+  background-color: #ff9900;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+  background-color: #ff6600;
+}
+
+/* Styles for smaller screens (e.g., mobile) */
+@media (max-width: 768px) {
+  header {
+    padding: 10px 20px; /* Adjust padding for smaller screens */
+  }
+
+  ul {
+    flex-direction: column; /* Stack navigation links vertically */
+    text-align: center; /* Center-align navigation links */
+    gap: 10px; /* Reduce gap between links */
+  }
+
+  li {
+    font-size: 16px; /* Reduce font size for smaller screens */
+  }
+
+  .search-bar {
+    flex-direction: column; /* Stack search input and button vertically */
+    align-items: flex-start; /* Align search elements to the left */
+  }
+
+  .search-bar input[type="text"] {
+    width: 100%; /* Take up the full width of the container */
+  }
+}
+/* Style the login button */
+.login-button-container {
+    /* display: block; */
+    /* gap: 10px; */
+    margin-top: 5px;
+  margin-left: 50px; 
+  margin-right: 10px; /* Add space from the right corner */
+}
+
+/* Style the login button */
+.login-button {
+  background-color: #007bff; /* Button background color */
+  color: white; /* Text color */
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px; /* Adjust padding as needed */
+  cursor: pointer;
+
+}
+
+.login-button:hover {
+  background-color: #0056b3; /* Change background color on hover */
+}
+/* header.component.css */
+
+.profile-icon {
+  background-color: #007bff; /* Set the background color */
+  background-image: url('../../assets/images/7052206.jpg');
+  color: transparent; /* Set the text color */
+  border: none;
+  border-radius: 50%;
+  /* padding: 8px 16px; */
+  width: 40px; /* Adjust the width and height as needed */
+  height: 40px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-left: 10px; /* Adjust spacing from the previous button */
+
+}
+
+/* Style the profile icon button on hover */
+.profile-icon:hover {
+  background-color: #0056b3; /* Darker shade of blue on hover */
+}
+/* Add this CSS to your stylesheet */
+.profile-image {
+  width: 38px; /* Adjust the width and height as needed */
+  height: 38px;
+  border-radius: 50%; /* Make the image rounded */
+  object-fit: cover; /* Ensure the image covers the entire container */
+  cursor: pointer; /* Add a pointer cursor to indicate it's clickable */
+  margin-left: 1px;
+    margin-top: 1px;
+}
+/* Light Theme */
+:root {
+  --background-color: #ffffff;
+  --text-color: #000000;
+}
+
+/* Dark Theme */
+:root.dark-theme {
+  --background-color: #333333;
+  --text-color: #ffffff;
+}
+
+/* Apply theme styles */
+.header {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}

@@ -1,0 +1,49 @@
+<!-- my-profile.component.html -->
+
+<app-header></app-header>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<div class="profile-container">
+    <div class="profile-header">
+        <div class="profile-picture">
+            <img [src]="userProfileImageUrl" alt="Profile Picture">
+            <button class="change-picture-button" (click)="changeProfilePicture()">Change Picture</button>
+        </div>
+        <div class="profile-details">
+            <!-- <h1>{{ userProfile.name }}</h1> -->
+            <div class="name-and-button">
+              <h1>{{ userProfile.name }}</h1>
+              <button class="edit-profile-button">Edit Profile</button>
+              <button class="edit-profile-button">View Archive</button>
+              <span class="settings-icon">&#9881;</span> <!-- Settings icon -->
+          </div>
+            <div class="profile-stats">
+              <p><span class="stats-count">16k</span> <span class="stats-label">Followers</span> <span class="stats-count">1067</span> <span class="stats-label">Following</span></p>
+            </div>
+            <h2 class="full-name">{{ userProfile.fullName }}</h2>
+            <div class="profile-description">
+              <p>{{ userProfile.description }}</p>
+          </div>
+            <!-- <p class="profile-description">{{ userProfile.description }}</p> -->
+
+            <!-- <button class="edit-profile-button">Edit Profile</button> -->
+        </div>
+    </div>
+
+    <div class="profile-tabs">
+        <button class="tab-button">Posts</button>
+        <button class="tab-button">Saved</button>
+        <button class="tab-button">Tagged</button>
+    </div>
+
+    <div class="profile-posts">
+      <div class="post-grid">
+          <div class="post-item" *ngFor="let post of posts">
+              <div class="post-thumbnail">
+                  <img [src]="post.imageUrl" alt="Post Image">
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+<app-footer></app-footer>

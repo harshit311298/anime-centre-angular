@@ -1,0 +1,24 @@
+<!-- settings.component.html -->
+
+<div class="container">
+    <div class="tabs">
+        <button class="tab-button" [class.active]="selectedTab === 'profile'" (click)="selectTab('profile')">Profile</button>
+        <button class="tab-button" [class.active]="selectedTab === 'privacy'" (click)="selectTab('privacy')">Privacy</button>
+        <button class="tab-button" [class.active]="selectedTab === 'security'" (click)="selectTab('security')">Security</button>
+        <!-- Add more tab buttons as needed -->
+    </div>
+    <div class="tab-content" [hidden]="selectedTab == 'profile'">
+        <h2>Profile Settings</h2>
+        <!-- Add profile settings content here -->
+    </div>
+    <div class="tab-content" [hidden]="selectedTab == 'privacy'">
+        <h2>Privacy Settings</h2>
+        <p>Privacy Setting: {{ privacySetting }}</p> <!-- Display the privacy setting value -->
+        <!-- Add privacy settings content here -->
+    </div>
+    <div class="tab-content" [hidden]="selectedTab == 'security'">
+        <h2>Security Settings</h2>
+        <!-- Add security settings content here -->
+    </div>
+    <!-- Add more tab content sections as needed -->
+</div>

@@ -1,0 +1,135 @@
+/* post.component.css */
+
+.post-form {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  .post-form input[type="file"] {
+    display: none;
+  }
+  
+  .post-form input[type="file"] + label {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  .image-container {
+    position: relative; /* Add relative positioning to the container */
+    display: inline-block; /* Make the container inline-block to fit the image size */
+
+  }
+  .post-form textarea {
+    width: 95%;
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: vertical;
+  }
+  
+  .post-form button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .post-form button:hover {
+    background-color: #0056b3;
+  }
+  mat-icon {
+    font-size: 24px; /* Adjust the size of the icon */
+    margin-right: 10px; /* Add spacing between the icon and the input */
+  }
+  /* post.component.css */
+.thumbnail-image {
+    max-width: 400px; /* Adjust the maximum width as needed */
+    max-height: 400px; /* Adjust the maximum height as needed */
+  }
+  /* post.component.css */
+.visually-hidden {
+    position: absolute;
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0;
+    border: 0;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  
+  /* post.component.css */
+
+/* Style the button with the "+" icon */
+.upload-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 16px; /* Adjust the padding as needed */
+    background-color: #007bff; /* Button background color */
+    color: white; /* Text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Style the "+" icon */
+  .upload-button mat-icon {
+    margin-right: 8px; /* Add spacing between the icon and text */
+    font-size: 24px; /* Adjust the icon size as needed */
+  }
+  
+  /* Apply hover effect */
+  .upload-button:hover {
+    background-color: #0056b3; /* Change background color on hover */
+  }
+  
+  /* ... your existing styles ... */
+
+  .clear-button {
+    position: absolute; /* Position it absolutely within the container */
+    top: 10px;
+    right: 0px;
+    background-color: rgba(0, 0, 0, 0.5); /* Set the background color for the button */
+    border-radius: 50%; /* Make it round */
+    cursor: pointer;
+    color: white;
+    transition: background-color 0.3s ease;
+    z-index: 1; /* Ensure the button is above the image */
+  }
+  
+  /* Style the "X" icon within the clear button */
+  .clear-button mat-icon {
+    font-size: 24px; /* Adjust the icon size as needed */
+    color: #007bff; /* Icon color */
+  }
+  
+  /* /* Apply hover effect to the clear button */
+  .clear-button:hover {
+    background-color: rgba(0, 0, 0, 0.1); 
+    /* Change background color on hover */
+  }
+    */
+  
+  
+  .modal-close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 19px;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.5); /* Set the background color for the button */
+    padding: -1px; /* Optional: Add some padding to the button */
+    border-radius: 50%; /* Optional: Add border radius for a circular button */
+    color: white;
+    border: none;
+    outline: none;
+  }

@@ -1,0 +1,19 @@
+<!-- post.component.html -->
+<div class="post-form">
+    <input type="file" id="fileInput" (change)="onFileSelected($event)">
+    <label for="fileInput" class="visually-hidden" [textContent]="selectedFile ? selectedFile.name : 'Choose an Image:'"></label>
+    <button type="button" (click)="openFileInput()" class="upload-button" *ngIf="!selectedFileUrl">
+      <mat-icon>add</mat-icon> Upload Image
+    </button>
+    <div class="image-container">
+        <!-- Image element -->
+        <img [src]="selectedFileUrl" alt="Thumbnail" *ngIf="selectedFileUrl" class="thumbnail-image" />
+    
+        <!-- Clear button with "X" icon using the "clear-button" class -->
+        <mat-icon class="clear-button" *ngIf="selectedFileUrl" (click)="clearSelectedFile()">close</mat-icon>
+
+      </div>
+        <textarea placeholder="Add a caption" [(ngModel)]="caption"></textarea>
+    <button (click)="onPost()">Post</button>
+  </div>
+  

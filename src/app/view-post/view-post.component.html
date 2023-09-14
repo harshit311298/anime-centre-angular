@@ -1,0 +1,86 @@
+<app-header></app-header>
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<!-- post-timeline.component.html -->
+
+<div class="container mb80">
+  <div class="page-timeline">
+    <div class="vtimeline-point" *ngFor="let post of posts">
+      <!-- <div class="vtimeline-icon">
+          <i class="fa fa-image"></i>
+        </div> -->
+      <!-- <div class="vtimeline-block"> -->
+      <!-- <span class="vtimeline-date">{{ post.date }}</span> -->
+      <div class="vtimeline-content">
+        <li class="list-inline-item">
+
+          <img src="{{ post.profilePicSrc }}" alt="{{ post.author }}" class="profile-pic">
+          <a href="#">{{ post.author }}</a>
+          <span class="float-right">
+            <i class="fa fa-calendar-o"></i> <a href="#">{{ post.postDate }}</a>
+          </span>
+        </li>
+        <!-- <div class="post-image-container">
+              <img src="{{ post.imageSrc }}" alt="" class="post-image">
+            </div> -->
+        <a class="post-image-container"><img src="{{ post.imageSrc }}" alt="" class="img-fluid mb20"></a>
+        <a>
+          <h3>{{ post.title }}</h3>
+        </a>
+        <ul class="post-meta list-inline">
+          <li class="list-inline-item">
+            <i class="fa fa-tags"></i>
+            <a href="#" *ngFor="let tag of post.tags">{{ tag }}</a>
+          </li>
+        </ul>
+        <p>
+          {{ post.content }}
+        </p><br>
+        <a href="#" class="btn btn-outline-secondary btn-sm">Read More</a>
+        <!-- </div> -->
+        <div class="post-actions">
+          <ul class="post-meta list-inline">
+            <li class="like-comment-share">
+              <i class="fa fa-heart"></i>
+              <a href="#">Like</a>
+            </li>
+            <li class="like-comment-share">
+              <i class="fa fa-comment"></i>
+              <a href="#">Comment</a>
+            </li>
+            <li class="like-comment-share">
+              <i class="fa fa-share"></i>
+              <a href="#">Share</a>
+            </li>
+          </ul>
+        </div>
+        <!-- Comment Section -->
+        <div class="comment-section">
+          <h4>Comments:</h4>
+          <div class="comment-navigation" *ngIf="post.comments.length > 0">
+            <a (click)="showAllComments(post)">View all {{ post.comments.length }} comments</a>
+          </div>
+          <div class="comment-display">
+            <ul class="comments">
+              <!-- Display a single comment based on an index -->
+              <li *ngIf="showAll || (currentCommentIndex >= 0 && currentCommentIndex < post.comments.length)">
+                <strong>{{ post.comments[currentCommentIndex].author }}</strong>: {{
+                post.comments[currentCommentIndex].text }}
+              </li>
+            </ul>
+          </div>
+          <!-- Comment Input Form with Instagram-like CSS -->
+          <form (submit)="addComment(post)" class="comment-form">
+            <input type="text" [(ngModel)]="newCommentText" placeholder="Add a comment">
+            <button type="submit">Post</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- source: https://www.bootdey.com/snippets/view/bs4-blog-timeline -->
+<app-footer></app-footer>

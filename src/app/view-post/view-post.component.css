@@ -1,0 +1,263 @@
+body {
+    margin-top: 20px;
+    background: #f3f3f3;
+}
+
+/*
+Timeline
+*/
+
+.page-timeline {
+    margin: 30px auto 0 auto;
+    position: relative;
+    max-width: 700px;
+}
+
+/* .page-timeline:before {
+    position: absolute;
+    content: '';
+    top: 0;
+    bottom: 0;
+    left: 303px;
+    right: auto;
+    height: 100%;
+    width: 3px;
+    background: #3498db;
+    z-index: 0;
+    
+        -webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,0.2),0 6px 10px 0 rgba(0,0,0,0.3);
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.2),0 6px 10px 0 rgba(0,0,0,0.3);
+} */
+
+/* .page-timeline:after {
+    position: absolute;
+    content: '';
+    width: 3px;
+    height: 40px;
+    background: #3498db;
+    background: -webkit-linear-gradient(top, #4782d3, rgba(52, 152, 219, 0));
+    background: linear-gradient(to bottom, #4782d3, rgba(52, 152, 219, 0));
+    top: 100%;
+    left: 303px;
+    
+        -webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,0.2),0 6px 10px 0 rgba(0,0,0,0.3);
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.2),0 6px 10px 0 rgba(0,0,0,0.3);
+} */
+
+.vtimeline-content {
+    margin-left: 0px;
+    background: #fff;
+    border: 1px solid #e6e6e6;
+    padding: 35px 20px;
+    border-radius: 3px;
+    text-align: left;
+
+    -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+.vtimeline-content h3 {
+    font-size: 1.5em;
+    font-weight: 600;
+    display: flex;
+    margin: 0;
+}
+
+.vtimeline-content p {
+    font-size: 0.9em;
+    margin: 0;
+}
+
+.vtimeline-point {
+    position: relative;
+    display: block;
+    /* vertical-align: top; */
+    margin-bottom: 30px;
+}
+
+.vtimeline-icon {
+    position: relative;
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    background: #4782d3;
+    border-radius: 50%;
+    float: left;
+    text-align: center;
+    line-height: 50px;
+    z-index: 99;
+    margin-left: 280px;
+}
+
+.vtimeline-icon i {
+    display: block;
+    font-size: 1.5em;
+    line-height: 50px;
+
+}
+
+.vtimeline-date {
+    width: 260px;
+    text-align: right;
+    position: absolute;
+    left: 0;
+    top: 10px;
+    font-weight: 400;
+    color: #374054;
+}
+
+.post-meta {
+    padding-top: 15px;
+    margin-bottom: 20px;
+}
+
+.post-meta li:not(:last-child) {
+    margin-right: 10px;
+}
+
+h3 {
+    font-family: "Montserrat", sans-serif;
+    color: #252525;
+    font-weight: 700;
+    font-variant-ligatures: common-ligatures;
+    margin-top: 0;
+    letter-spacing: -0.2px;
+    line-height: 1.3;
+}
+
+.mb20 {
+    margin-bottom: 20px !important;
+    /* background:url('../../assets/images/1311951.jpg'); */
+    max-width: 100%;
+    ;
+    max-height: 700px;
+    object-fit: contain;
+    /* align-items: center !important; */
+
+}
+
+.float-right {
+    float: right;
+}
+
+.profile-pic {
+    border-radius: 50%;
+    /* Makes the image round */
+    width: 50px;
+    /* Adjust the width and height as needed */
+    height: 50px;
+    /* Adjust the width and height as needed */
+}
+
+.post-image-container {
+    display: flex;
+    align-items: center;
+    /* Vertically center */
+    justify-content: center;
+    /* Horizontally center */
+    margin-bottom: 20px;
+    /* Add margin as needed */
+}
+
+/* Custom styles for Instagram-like buttons */
+.post-actions {
+    display: flex;
+    justify-content: flex-start; /* Align buttons to the left */
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .like-comment-share {
+    display: inline-flex;
+    align-items: center;
+    padding-left: 5px;
+  }
+  
+  .like-comment-share a {
+    text-decoration: none;
+    color: #333; /* Adjust the color to your preference */
+    padding-left: 5px;
+  }
+  
+  .like-comment-share i {
+    font-size: 20px;
+    color: #333; /* Adjust the color to your preference */
+  }
+  
+  /* Increase the button size on hover for better user experience */
+  .like-comment-share a:hover {
+    font-size: 24px;
+  }
+  
+/* Custom styles for the comment section (Instagram-like) */
+.comment-section {
+    margin-top: 16px;
+    padding: 8px;
+    border-top: 1px solid #eee; /* Light gray border at the top */
+  }
+  
+  .comment-section h4 {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333; /* Dark text color */
+  }
+  
+  .comments {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .comments li {
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #333; /* Dark text color */
+  }
+  
+  .comment-form {
+    display: flex;
+    align-items: center;
+    padding: 8px 0; /* Add some padding at the top and bottom */
+    border-top: 1px solid #eee; /* Light gray border at the top */
+  }
+  
+  .comment-form input[type="text"] {
+    flex-grow: 1;
+    padding: 8px;
+    border: none;
+    border-bottom: 1px solid #eee; /* Light gray border at the bottom */
+    font-size: 14px;
+    background-color: transparent;
+    outline: none;
+  }
+  
+  .comment-form button[type="submit"] {
+    background-color: transparent;
+    color: #0095f6; /* Instagram blue */
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 14px;
+    outline: none;
+  }
+  
+  .comment-form button[type="submit"]:hover {
+    text-decoration: underline;
+  }
+  /* Custom styles for the "View all" link */
+.comment-navigation a {
+    text-decoration: none;
+    color: #09101d66; /* Instagram blue */
+    font-weight: 500;
+    font-size: 14px;
+    cursor: pointer;
+    outline: none;
+    transition: color 0.3s;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;;
+  }
+  
+  .comment-navigation a:hover {
+    color: #0056b3; /* Hover color */
+  }
+  

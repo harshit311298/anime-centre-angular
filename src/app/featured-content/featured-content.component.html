@@ -1,0 +1,51 @@
+<section class="tv-shows">
+  <h1>Stories</h1>
+  <div class="stories">
+    <div class="story" *ngFor="let story of stories; let i = index">
+      <div class="story-image" [class.unseen]="!story.seen">
+        <img src="{{ story.image }}" alt="Story" (click)="markAsSeen(i)" (click)="openStoryModal(story.image)">
+      </div>
+    </div>  
+  </div>
+<!-- Add the post component at the top of your section -->
+<h1>Add your Post</h1>
+<app-post></app-post>
+  <h1>Suggested Friends</h1>
+  <div class="user-list">
+    <div class="user-card" *ngFor="let user of suggestedFriends; let i = index">
+      <div class="card">
+        <img class="card-img-top" src="{{ user.profileImage }}" alt="User Profile">
+        <div class="card-body">
+          <h5 class="card-title text-center">{{ user.username }}</h5>
+          <button class="btn btn-primary btn-block" [disabled]="user.requestSent" (click)="addFriend(i)">
+            {{ user.requestSent ? 'Friend Request Sent' : 'Add Friend' }}
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h1>Featured Images</h1>
+  <div class="tv-shows-list">
+
+    <div class="tv-show" *ngFor="let tvShow of tvShows; let i = index">
+      <a [routerLink]="['/view-post']">
+
+      <img src="{{ tvShow.image }}" alt="{{ tvShow.title }}" class="tv-show-image">
+      <h2>
+      <a href="/view-post">{{ tvShow.title }}</a>  
+      </h2>
+    </a>
+
+      <div class="description">
+        <p [innerHTML]="getDescription(i)" [class.expanded]="expandedDescriptions[i]"></p>
+        <a href="javascript:void(0);" class="read-more" (click)="toggleDescription(i)">
+          {{ expandedDescriptions[i] ? 'Read less' : 'Read more' }}
+        </a>
+      </div>
+    </div>
+    
+  </div>
+   <!-- Chat Section -->
+   <!-- <app-chat></app-chat> -->
+</section>

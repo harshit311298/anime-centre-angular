@@ -1,0 +1,346 @@
+/* my-profile.component.css */
+
+/* Profile Container Styles */
+.profile-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Profile Header Styles */
+.profile-header {
+  display: flex;
+  align-items: center;
+}
+
+.profile-info h1 {
+  font-size: 24px;
+}
+
+.profile-stats {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.profile-stats p {
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+/* Edit Profile Button Styles */
+.edit-profile-button {
+  background-color: #1900ffbf;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 16px;
+  margin-top: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Profile Posts Styles */
+.profile-posts {
+  margin-top: 20px;
+}
+
+.post-list {
+  list-style: none;
+  padding: 0;
+}
+
+/* Post Thumbnail Styles */
+.post-thumbnail {
+  flex: 1;
+  max-width: 150px;
+  max-height: 150px;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+
+
+/* Logout Button Styles */
+.logout-button {
+  background-color: #ff3333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-left: auto;
+  display: block;
+}
+
+/* Change Profile Picture Button Styles */
+.change-picture-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Change Profile Picture Button Hover Styles */
+.change-picture-button:hover {
+  background-color: #0056b3;
+}
+
+/* Profile Picture Container Styles */
+.profile-picture {
+  flex: 0.4;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+}
+
+.profile-picture img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #007bff;
+  margin-bottom: 10px;
+}
+
+/* Profile Tabs Styles */
+.profile-tabs {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.tab-button {
+  background-color: transparent;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.tab-button:focus {
+  outline: none;
+  border-bottom: 2px solid #007bff;
+}
+
+/* Profile Stats Styles */
+.profile-stats {
+  display: flex;
+  align-items: baseline;
+  margin-top: 10px;
+}
+
+.stats-count {
+  font-weight: bold;
+  font-size: 20px;
+  margin-right: 5px;
+}
+
+.stats-label {
+  font-size: 14px;
+  color: #777;
+  margin-right: 10px;
+}
+
+/* Profile Description Styles */
+.profile-description {
+  text-align: left;
+  margin-top: 10px;
+  font-size: 16px;
+  color: #777;
+}
+
+/* Full Name Styles */
+.full-name {
+  font-size: 15px;
+  color: #333;
+  margin: 5px 0px -20px;
+}
+
+/* Name and Button Styles */
+.name-and-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.settings-icon {
+  font-size: 33px;
+  margin-left: 10px;
+}
+
+/* Instagram-like Post Styles */
+.profile-posts {
+  margin-top: 20px;
+}
+
+.post-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  margin-top: 50px;
+}
+
+
+
+
+/* ... (previous styles) */
+.profile-details {
+  flex: 1;
+  margin-left: 20px;
+  text-align: left; /* Adjust text alignment as needed */
+}
+/* Instagram-like Post Styles */
+/* Instagram-like Post Styles */
+.post-item {
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 0px;
+  overflow: hidden; /* Ensure thumbnail aspect ratio is maintained */
+  width: 150px; /* Adjust the width as needed */
+  height: 150px; /* Adjust the height as needed */
+}
+
+.post-thumbnail {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  border-radius: 0px;
+  justify-content: center;
+  align-items: center;
+}
+
+.post-thumbnail img {
+  border-radius: 0px;
+
+  /* max-width: 100%; */
+  max-height: 100%;
+  object-fit: contain; /* Ensure the image scales while maintaining its aspect ratio */
+}
+.user-profile-image {
+  width: 150px; /* Set your desired width */
+  height: 150px; /* Set your desired height */
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #007bff;
+  margin-bottom: 10px;
+  transition: transform 0.2s; /* Add a smooth transition for hover effect */
+}
+.user-profile-image:hover {
+  transform: scale(1.1); /* Increase the size of the image on hover */
+}
+.profile-posts h3{
+font-weight: bold;
+font-size: xx-large;
+}
+
+/* For screens smaller than 768px (e.g., mobile devices) */
+@media screen and (max-width: 768px) {
+  .profile-container {
+    padding: 10px; /* Reduce padding for smaller screens */
+  }
+
+  .profile-stats {
+    flex-direction: row; /* Display profile stats in a row on smaller screens */
+  }
+
+  .profile-info h1 {
+    font-size: 20px; /* Reduce font size for smaller screens */
+  }
+
+  /* Add more responsive styles as needed */
+}
+
+/* For screens between 768px and 992px (e.g., tablets) */
+@media screen and (min-width: 769px) and (max-width: 992px) {
+  /* Adjust styles for tablets */
+}
+
+/* For screens larger than 992px (e.g., desktops) */
+@media screen and (min-width: 993px) {
+  /* Adjust styles for desktops */
+}
+/* For screens smaller than 768px (e.g., mobile devices) */
+@media screen and (max-width: 768px) {
+  .post-grid {
+    grid-template-columns: repeat(2, 1fr); /* Two columns for smaller screens */
+    gap: 5px; /* Reduce gap between items */
+  }
+}
+
+/* For screens larger than 768px (e.g., tablets and desktops) */
+@media screen and (min-width: 769px) {
+  .post-grid {
+    grid-template-columns: repeat(5, 1fr); /* Back to five columns for larger screens */
+    gap: 10px; /* Restore the original gap */
+  }
+}
+/* For screens smaller than 768px (e.g., mobile devices) */
+@media screen and (max-width: 768px) {
+  .post-grid {
+    grid-template-columns: repeat(2, 1fr); /* Two columns for smaller screens */
+    gap: 5px; /* Reduce gap between items */
+  }
+}
+
+/* For screens larger than 768px (e.g., tablets and desktops) */
+@media screen and (min-width: 769px) {
+  .post-grid {
+    grid-template-columns: repeat(5, 1fr); /* Back to five columns for larger screens */
+    gap: 10px; /* Restore the original gap */
+  }
+}
+/* For screens smaller than 768px (e.g., mobile devices) */
+@media screen and (max-width: 768px) {
+  .user-profile-image {
+    width: 100px; /* Reduce the profile picture size for smaller screens */
+    height: 100px;
+  }
+}
+/* For screens smaller than 768px (e.g., mobile devices) */
+@media screen and (max-width: 768px) {
+  .profile-info h1 {
+    font-size: 18px; /* Reduce font size for smaller screens */
+  }
+
+  /* Adjust font sizes for other elements as needed */
+}
+@media screen and (max-width: 768px) {
+  .edit-profile-button {
+    font-size: 14px; /* Reduce font size for smaller screens */
+    padding: 6px 12px; /* Adjust padding for smaller screens */
+  }
+  .name-and-button {
+    flex-direction: column; /* Stack elements vertically on smaller screens */
+    align-items: flex-start; /* Adjust alignment for smaller screens */
+  }
+
+  .settings-icon {
+    font-size: 24px; /* Reduce the icon size for smaller screens */
+    margin-top: 10px; /* Add some space between the name and the icon */
+    margin-left: 0; /* Reset the left margin for the icon */
+  }
+  .profile-stats {
+    flex-direction: column; /* Stack elements vertically on smaller screens */
+    align-items: flex-start; /* Adjust alignment for smaller screens */
+  }
+
+  .stats-count {
+    font-size: 16px; /* Reduce font size for smaller screens */
+    margin-right: 0; /* Remove right margin for better spacing */
+  }
+
+  .stats-label {
+    font-size: 12px; /* Reduce font size for smaller screens */
+    margin-right: 0; /* Remove right margin for better spacing */
+    color: #555; /* Adjust label color for better readability */
+  }
+
+}
