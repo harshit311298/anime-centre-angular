@@ -1,4 +1,5 @@
 // auth.service.ts
+// import { Token } from '@angular/compiler';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -19,10 +20,11 @@ export class AuthService {
   //   }
   //   return false;
   // }
-  login() {
+  login(token:any) {
     // Perform authentication logic here if needed
     // For now, we'll simply set isAuthenticated to true
     this.isAuthenticated = true;
+    this.authToken=token
   }
 
   // Simulate user logout

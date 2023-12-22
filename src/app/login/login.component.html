@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- Created By CodingNepal -->
 <html lang="en" dir="ltr">
    <head>
       <meta charset="utf-8">
@@ -11,15 +10,25 @@
       <div class="bg-img">
          <div class="content">
             <header>Login Form</header>
-            <form action="#">
+            <form [formGroup]="form" action="#">
+               <!-- <form [formGroup]="form" (ngSubmit)="onSubmit()" novalidate> -->
+
                <div class="field">
                   <span class="fa fa-user"></span>
-                  <input type="text" required placeholder="Email or Phone">
+                  <input type="text" required placeholder="Email or Phone or Username" for="logginId" id="logginId" formControlName="logginId">
+                  <!-- <mat-error *ngIf="form.get('logginId')?.hasError('required') && form.get('logginId')?.touched">Username is required.</mat-error> -->
+                  <div *ngIf="form.get('logginId')?.hasError('required') && form.get('logginId')?.touched" class="error-message">
+                     Email is required.
+                   </div>
                </div>
                <div class="field space">
                   <span class="fa fa-lock"></span>
-                  <input type="{{ showPassword ? 'text' : 'password' }}" class="pass-key" required placeholder="Password">
+                  <input type="{{ showPassword ? 'text' : 'password' }}" class="pass-key" required placeholder="Password" for="password" id="password" formControlName="password">
                   <span class="show" (click)="toggleShowPassword()">SHOW</span>
+                  <!-- <mat-error *ngIf="form.get('password')?.hasError('required') && form.get('password')?.touched">Password is required.</mat-error> -->
+                  <div *ngIf="form.get('password')?.hasError('required') && form.get('password')?.touched" class="error-message">
+                     Password is required.
+                   </div>
                </div>
                <div class="pass">
                   <a href="/forgot-password">Forgot Password?</a>

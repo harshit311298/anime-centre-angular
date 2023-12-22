@@ -5,6 +5,11 @@
   box-sizing: border-box;
   user-select: none;
 }
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 4px;
+}
 .bg-img{
   background: url('../../assets/images/background.jpg');
   height: 100vh;

@@ -1,0 +1,8 @@
+/* app/story-timer/story-timer.component.css */
+
+.story-timer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  

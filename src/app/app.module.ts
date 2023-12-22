@@ -37,7 +37,13 @@ import { SettingsComponent } from './settings/settings.component';
 import { ViewPostComponent } from './view-post/view-post.component';
 import { ThemeToggleButtonComponent } from './theme-toggle-button/theme-toggle-button.component'; // Import the AuthService
 import { ThemeService } from './theme.service'; // Import your ThemeService here
-import { AuthGuard } from './auth.guard.service'; // Import your AuthGuard
+import { AuthGuard } from './auth.guard.service';
+import { ChangeProfilePictureDialogComponent } from './change-profile-picture-dialog/change-profile-picture-dialog.component'; // Import your AuthGuard
+import { ImageCropperModule } from 'ngx-image-cropper';
+import { PreviewDialogComponent } from './preview-dialog/preview-dialog.component';
+import { MatInputModule } from '@angular/material/input';
+import { StoryTimerComponent } from './story-timer/story-timer.component';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 
 const appRoutes: Routes = [
   { path: 'signup', component: SignupComponent },
@@ -83,7 +89,11 @@ const appRoutes: Routes = [
     MyProfileComponent,
     SettingsComponent,
     ViewPostComponent,
-    ThemeToggleButtonComponent
+    ThemeToggleButtonComponent,
+    ChangeProfilePictureDialogComponent,
+    PreviewDialogComponent,
+    StoryTimerComponent,
+    
   ],
 
     imports: [
@@ -101,7 +111,10 @@ const appRoutes: Routes = [
     MatSnackBarModule,
     HttpClientModule,
     MatDialogModule,
-    MatIconModule
+    MatIconModule,
+    ImageCropperModule,
+    MatInputModule,
+    MatProgressBarModule
     // other imports here
   ],
   providers: [AuthService,ThemeService],

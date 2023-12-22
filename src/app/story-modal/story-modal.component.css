@@ -38,3 +38,15 @@
   max-height: 80vh;
   margin-bottom: 10px;
 }
+/* Add this CSS to style the timestamp */
+.timestamp {
+  position: absolute;
+  top: 10px; /* Adjust the top position as needed */
+  left: 10px; /* Adjust the left position as needed */
+  font-size: 14px; /* Adjust the font size as needed */
+  color: white; /* Adjust the color as needed */
+  background-color: rgba(0, 0, 0, 0.5); /* Background color for the timestamp */
+  padding: 5px 10px; /* Adjust padding as needed */
+  border-radius: 5px; /* Add border radius for rounded corners */
+  z-index: 1; /* Ensure the timestamp is above the image */
+}

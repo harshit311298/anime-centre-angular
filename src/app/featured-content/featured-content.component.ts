@@ -14,6 +14,11 @@ interface SuggestedFriend {
   username: string;
   requestSent: boolean;
 }
+interface Story {
+  username: string;
+  imageSrc: string;
+  timestamp: Date;
+}
 @Component({
   selector: 'app-featured-content',
   templateUrl: './featured-content.component.html',
@@ -119,7 +124,11 @@ export class FeaturedContentComponent implements OnInit {
 
     // Add more TV show objects as needed
   ];
-stories: { image: string; seen: boolean }[] = []; // Initialize the 'stories' array with the correct type annotation
+   randomDate(start:any, end:any) {
+    return new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));
+  }
+  
+stories: { image: string; seen: boolean;  username: string;  timestamp: any;}[] = []; // Initialize the 'stories' array with the correct type annotation
 generate(): any | null {
   let seen = [true, false];
   // let stories: { image: string; seen: boolean }[] = []; // Initialize the 'stories' array with the correct type annotation
@@ -131,6 +140,8 @@ generate(): any | null {
       this.stories.push({
         image: randomImage,
         seen: seen[Math.floor(Math.random() * seen.length)],
+        timestamp:this.randomDate(new Date(2023, 0, 1), new Date()),
+        username:"jhon quick"
       });
     }
   }
@@ -172,9 +183,9 @@ generate(): any | null {
 
   constructor(private dialog: MatDialog) { }
 
-  openStoryModal(storyImage: string): void {
+  openStoryModal(storyImage: string,timestamp:Date): void {
     const dialogRef = this.dialog.open(StoryModalComponent, {
-      data: { storyImage }
+      data: { storyImage,timestamp }
     });
 
     dialogRef.afterClosed().subscribe(() => {

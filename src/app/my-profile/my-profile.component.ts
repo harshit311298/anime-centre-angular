@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { ChangeProfilePictureDialogComponent } from '../change-profile-picture-dialog/change-profile-picture-dialog.component';
+import { MatDialog } from '@angular/material/dialog';
+
 interface Post {
   imageUrl: string;
   caption: string;
@@ -11,7 +14,7 @@ interface Post {
   styleUrls: ['./my-profile.component.css']
 })
 export class MyProfileComponent {
-  constructor(private router: Router) {}
+  constructor(private router: Router,private dialog: MatDialog) {}
   chooseRandomImage(): string | null {
     if (this.imageFilenames.length === 0) {
       return null;
@@ -139,12 +142,19 @@ export class MyProfileComponent {
   userProfileImageUrl = '../../assets/images/pxfuel (1).jpg';
 
   changeProfilePicture(): void {
-    // Implement logic to change the profile picture here
-    console.log('Changing profile picture...');
+    const dialogRef = this.dialog.open(ChangeProfilePictureDialogComponent, {
+      width: '400px', // Set the width of the dialog as per your design
+    });
+  
+    dialogRef.afterClosed().subscribe(() => {
+      // Handle any actions after the dialog is closed, such as refreshing the profile picture.
+    });
   }
+
   logout(): void {
     console.log("user logged out.")
     this.router.navigate(['/login']);
     // You can also redirect the user to the login page after logging out if needed
   }
+  
 }

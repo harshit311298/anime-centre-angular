@@ -3,7 +3,7 @@
   <div class="stories">
     <div class="story" *ngFor="let story of stories; let i = index">
       <div class="story-image" [class.unseen]="!story.seen">
-        <img src="{{ story.image }}" alt="Story" (click)="markAsSeen(i)" (click)="openStoryModal(story.image)">
+        <img src="{{ story.image }}" alt="Story" (click)="markAsSeen(i)" (click)="openStoryModal(story.image,story.timestamp)">
       </div>
     </div>  
   </div>

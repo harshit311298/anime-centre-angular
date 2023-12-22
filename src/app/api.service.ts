@@ -27,6 +27,17 @@ export class ApiService {
       catchError(this.handleError)
     );
   }
+  login(user: any): Observable<any> {
+    // let params = new HttpParams();
+    // for (const key in queryParams) {
+    //   if (queryParams.hasOwnProperty(key)) {
+    //     params = params.append(key, queryParams[key]);
+    //   }
+    // }
+    return this.http.post(`${this.apiUrl}/api/v1/user/login`, user).pipe(
+      catchError(this.handleError)
+    );
+  }
   private handleError(error: HttpErrorResponse) {
     let errorMessage = 'An error occurred.';
     if (error.error instanceof ErrorEvent) {

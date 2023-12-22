@@ -1,0 +1,26 @@
+<div class="profile-picture-container">
+  <h2 class="profile-picture-heading">Change Profile Picture</h2>
+  <div class="file-input-container">
+    <label for="profile-picture-upload" class="file-label">
+      <span class="file-label-text" *ngIf="!imageChangedEvent">Choose a new picture</span>
+      <input type="file" id="profile-picture-upload" class="file-input" accept="image/*" (change)="onFileSelected($event)">
+    </label>
+  </div>
+  <div class="preview-image-container">
+    <image-cropper
+      [imageChangedEvent]="imageChangedEvent"
+      [maintainAspectRatio]="true"
+      [aspectRatio]="1"
+      [resizeToWidth]="200"
+      format="png"
+      (imageCropped)="imageCropped($event)"
+    ></image-cropper>
+  </div>
+  <!-- <div class="preview-button-container">
+    <button class="preview-button" *ngIf="croppedImageObjectUrl" (click)="openPreviewDialog()">Preview</button>
+  </div> -->
+
+  <div class="upload-button-container">
+    <button class="upload-button" *ngIf="croppedImageObjectUrl" (click)="uploadProfilePicture()">Save</button>
+  </div>
+</div>
